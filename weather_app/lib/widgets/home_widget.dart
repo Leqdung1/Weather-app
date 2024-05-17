@@ -1,9 +1,11 @@
-import 'dart:ffi';
+
 
 import 'package:flutter/material.dart';
 
 class HomeWeatherIcon extends StatelessWidget {
   const HomeWeatherIcon({super.key});
+
+  IconData? get icon => null;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,8 @@ class HomeWeatherIcon extends StatelessWidget {
       width: 250,
       height: 250,
       child:
-          Image.asset('assets/images/weathers/cloudy.png', fit: BoxFit.cover),
+          Image.asset('assets/images/weathers/cloudy.png', fit: BoxFit.cover,
+          ),
     );
   }
 }

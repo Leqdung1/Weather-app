@@ -12,7 +12,7 @@ class Bottom extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(bottom: 8.0),
         child: Container(
-          height: 70,
+          height: 50,
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 96, 195, 245),
           ),

@@ -1,17 +1,16 @@
 
-
 import 'package:flutter/material.dart';
 
-class HumidityIcon extends StatelessWidget {
-  const HumidityIcon({super.key});
+class SearchIcon extends StatelessWidget {
+  const SearchIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 40,
-      height: 40,
+      height: 18,
+      width: 18,
       child: Image.asset(
-        'assets/images/icons/water.png',
+        'assets/images/icons/search-interface-symbol.png',
         fit: BoxFit.cover,
         color: Colors.white,
       ),
