@@ -1,16 +1,17 @@
-
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
+import 'package:weather_app/widgets/bottom_widget.dart';
 import 'package:weather_app/widgets/header_widget.dart';
 import 'package:weather_app/widgets/list_widget.dart';
 
 class ListPage extends StatelessWidget {
-  const ListPage({super.key});
+  const ListPage({Key? key}); // Remove 'const'
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         alignment: Alignment.center,
         decoration: const BoxDecoration(
@@ -23,13 +24,16 @@ class ListPage extends StatelessWidget {
             ],
           ),
         ),
-        child: const Column(
+        child: Column(
           children: [
-            Header(),
-            SizedBox(
-              height: 20,
+            const Header(),
+            Container(
+              height: MediaQuery.of(context).size.height - 200,
+              child: const SingleChildScrollView(
+                child: ListWidget(),
+              ),
             ),
-            ListWidget(),
+            const BottomWidget(),
           ],
         ),
       ),

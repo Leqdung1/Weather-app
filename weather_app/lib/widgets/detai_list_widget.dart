@@ -6,7 +6,8 @@ class detail_list_widget extends StatelessWidget {
 
   const detail_list_widget({
     super.key,
-    required HomeWeatherIcon(),
+    // ignore: non_constant_identifier_names
+    required Function() HomeWeatherIcon,
   });
 
   @override
